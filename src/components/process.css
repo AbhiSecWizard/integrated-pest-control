@@ -1,0 +1,176 @@
+/* Add to your home stylesheet (or import it). Adjust the variables to your theme. */
+
+.home-steps {
+  list-style: none;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem 1.75rem;
+  counter-reset: step;
+}
+
+.home-steps__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Rail: number badge, then a dashed line running to the next badge */
+.home-steps__rail {
+  display: flex;
+  align-items: center;
+  height: 2.3rem;
+}
+.home-steps__item:not(:last-child) .home-steps__rail::after {
+  content: "";
+  flex: 1;
+  height: 0;
+  margin-left: 0.6rem;
+  margin-right: calc(0.6rem - 1.75rem); /* reaches across the grid gap */
+  border-top: 2px dashed var(--accent, #2f7d32);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.7s ease 0.4s;
+}
+.home-steps__item.is-in:not(:last-child) .home-steps__rail::after {
+  transform: scaleX(1);
+}
+.home-steps__title { margin: 0; font-size: 1.15rem; line-height: 1.25; }
+
+.home-steps__art {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.1);
+}
+
+.home-steps__head { display: flex; align-items: center; gap: 0.65rem; }
+.home-steps__head h3 { margin: 0; font-size: 1.15rem; line-height: 1.25; }
+.home-steps__n {
+  flex: none;
+  width: 2.3rem;
+  height: 2.3rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent-dark, #1f4d24);
+  color: #fff;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+.home-steps__text { margin: 0; line-height: 1.65; color: var(--muted, #4b5563); }
+.home-steps__details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+.home-steps__details li { position: relative; padding-left: 1.2rem; }
+.home-steps__details li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--accent, #2f7d32);
+}
+
+.home-steps__cta {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  background: var(--soft, #eef5ee);
+}
+.home-steps__cta p { margin: 0; max-width: 56ch; line-height: 1.6; }
+
+/* ---------- Illustration colours ---------- */
+.pi { display: block; width: 100%; height: auto; }
+.pi-bg      { fill: var(--soft, #eef5ee); }
+.pi-wall    { fill: #f8fafc; stroke: #94a3b8; stroke-width: 2; }
+.pi-roof    { fill: #64748b; }
+.pi-door    { fill: #cbd5e1; }
+.pi-window  { fill: #bfdbfe; stroke: #94a3b8; stroke-width: 2; }
+.pi-gap     { fill: #1f2937; }
+.pi-lens    { fill: rgba(255, 255, 255, 0.45); }
+.pi-lens-ring { fill: none; stroke: var(--accent-dark, #1f4d24); stroke-width: 5; }
+.pi-handle  { stroke: var(--accent-dark, #1f4d24); stroke-width: 7; stroke-linecap: round; fill: none; }
+.pi-paper   { fill: #fff; stroke: #cbd5e1; stroke-width: 2; }
+.pi-clip    { fill: #64748b; }
+.pi-line    { stroke: #cbd5e1; stroke-width: 3; stroke-linecap: round; fill: none; }
+.pi-floor   { fill: #d9e7d9; }
+.pi-tank    { fill: var(--accent, #2f7d32); }
+.pi-cap     { fill: #1f4d24; }
+.pi-hose    { stroke: #475569; stroke-width: 4; fill: none; stroke-linecap: round; }
+.pi-nozzle  { fill: #475569; }
+.pi-spray circle { fill: rgba(47, 125, 50, 0.35); }
+.pi-box     { fill: #334155; }
+.pi-slot    { fill: #0f172a; }
+.pi-lock    { fill: #fbbf24; }
+.pi-glue    { fill: #fde68a; stroke: #d97706; stroke-width: 2; }
+.pi-head    { fill: var(--accent-dark, #1f4d24); }
+.pi-sign    { stroke: #1d4ed8; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.pi-stamp-ring { fill: rgba(255, 255, 255, 0.9); stroke: var(--accent, #2f7d32); stroke-width: 4; }
+.pi-tick    { stroke: var(--accent, #2f7d32); stroke-width: 6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.pi-axis    { stroke: #94a3b8; stroke-width: 3; stroke-linecap: round; fill: none; }
+.pi-bar     { fill: var(--accent, #2f7d32); }
+.pi-shield  { fill: var(--accent-dark, #1f4d24); }
+.pi-shield + .pi-tick { stroke: #fff; }
+
+/* ---------- Animations (start when the step is in view) ---------- */
+.pi-sign { stroke-dasharray: 200; stroke-dashoffset: 200; }
+.pi-stamp { transform-box: fill-box; transform-origin: center; transform: scale(0); }
+.pi-bar { transform-box: fill-box; transform-origin: bottom; transform: scaleY(0); }
+.pi-spray circle { opacity: 0; transform-box: fill-box; transform-origin: center; }
+
+.is-in .pi-scan { animation: pi-scan 3.2s ease-in-out 0.4s infinite alternate; }
+.is-in .pi-spray circle { animation: pi-puff 1.8s ease-out infinite; }
+.is-in .pi-spray circle:nth-child(2) { animation-delay: 0.25s; }
+.is-in .pi-spray circle:nth-child(3) { animation-delay: 0.5s; }
+.is-in .pi-spray circle:nth-child(4) { animation-delay: 0.75s; }
+.is-in .pi-spray circle:nth-child(5) { animation-delay: 1s; }
+.is-in .pi-sign { animation: pi-draw 1.2s ease forwards 0.4s; }
+.is-in .pi-stamp { animation: pi-pop 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) forwards 1.5s; }
+.is-in .pi-bar { animation: pi-grow 0.7s ease forwards; animation-delay: var(--d, 0s); }
+
+@keyframes pi-scan {
+  from { transform: translate(-46px, -22px); }
+  to   { transform: translate(0, 0); }
+}
+@keyframes pi-puff {
+  0%   { opacity: 0; transform: scale(0.4); }
+  30%  { opacity: 1; }
+  100% { opacity: 0; transform: scale(1.6) translateX(8px); }
+}
+@keyframes pi-draw { to { stroke-dashoffset: 0; } }
+@keyframes pi-pop  { to { transform: scale(1); } }
+@keyframes pi-grow { to { transform: scaleY(1); } }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1080px) {
+  .home-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .home-steps__item .home-steps__rail::after { display: none; }
+}
+@media (max-width: 600px) {
+  .home-steps { grid-template-columns: 1fr; }
+  .home-steps__cta { padding: 1.25rem; }
+}
+
+/* ---------- Reduced motion: show final states, no movement ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .pi-sign { stroke-dashoffset: 0; animation: none !important; }
+  .pi-stamp, .pi-bar { transform: none; animation: none !important; }
+  .pi-spray circle { opacity: 0.6; animation: none !important; }
+  .is-in .pi-scan { animation: none; }
+  .home-steps__item .home-steps__rail::after { transform: scaleX(1); transition: none; }
+}

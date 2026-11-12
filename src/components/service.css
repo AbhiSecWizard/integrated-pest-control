@@ -1,0 +1,210 @@
+/* Add to your home stylesheet. Uses your existing .home-* classes;
+   adjust the CSS variables to match your theme. */
+
+.home-lead {
+  max-width: 62ch;
+  margin: 0.75rem 0 0;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--muted, #4b5563);
+}
+
+.home-stats {
+  list-style: none;
+  margin: 2rem 0 2.5rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+.home-stats li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.25rem 0 0.25rem 1rem;
+  border-left: 3px solid var(--accent, #2f7d32);
+}
+.home-stats strong {
+  font-size: 1.6rem;
+  line-height: 1.1;
+}
+.home-stats span {
+  font-size: 0.9rem;
+  color: var(--muted, #4b5563);
+}
+
+/* Cards */
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 1.5rem;
+}
+.home-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card, #fff);
+  border: 1px solid var(--line, #e5e7eb);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.home-card__art {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: var(--soft, #eef5ee);
+}
+.home-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.home-card__fallback {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: var(--accent, #2f7d32);
+}
+.home-card__fallback .home-icon {
+  width: 72px;
+  height: 72px;
+}
+.home-card__badge {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1f2937;
+}
+.home-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  flex: 1;
+}
+.home-card__head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.home-card__head h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+.home-card__mini-icon {
+  width: 28px;
+  height: 28px;
+  flex: none;
+  color: var(--accent, #2f7d32);
+}
+.home-card__body p {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--muted, #4b5563);
+}
+.home-card__points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+}
+.home-card__points li {
+  position: relative;
+  padding-left: 1.3rem;
+}
+.home-card__points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--accent, #2f7d32);
+}
+.home-card__link {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-weight: 600;
+  color: var(--accent, #2f7d32);
+  text-decoration: none;
+}
+.home-card__link:hover,
+.home-card__link:focus-visible {
+  text-decoration: underline;
+}
+
+/* Closing call to action */
+.home-cta {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 16px;
+  background: var(--accent-dark, #1f4d24);
+  color: #fff;
+}
+.home-cta h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.4rem;
+}
+.home-cta p {
+  margin: 0 0 1rem;
+  max-width: 52ch;
+  opacity: 0.9;
+}
+.home-cta__promises {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  font-size: 0.92rem;
+}
+.home-cta__promises li::before {
+  content: "\2713";
+  margin-right: 0.4rem;
+}
+.home-cta__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.home-btn {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+.home-btn--primary {
+  background: #fff;
+  color: var(--accent-dark, #1f4d24);
+}
+.home-btn--ghost {
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  color: #fff;
+}
+.home-btn:focus-visible,
+.home-card__link:focus-visible {
+  outline: 3px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  .home-cta {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+}

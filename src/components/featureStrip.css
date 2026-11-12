@@ -1,0 +1,4 @@
+.home-strip { list-style: none; margin: 0; padding: 0; }
+.home-strip__text { display: flex; flex-direction: column; }
+.home-strip__title { font-weight: 700; }
+.home-strip__subtitle { opacity: 0.8; font-size: 0.9rem; }
