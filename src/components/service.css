@@ -208,3 +208,153 @@
     padding: 1.5rem;
   }
 }
+
+
+/* Add to your home stylesheet. Uses your theme variables with safe fallbacks. */
+
+.sv { display: block; width: 100%; height: 100%; }
+
+/* ---------- Colours ---------- */
+.sv-bg       { fill: var(--soft, #eef5ee); }
+.sv-wall     { fill: #f8fafc; }
+.sv-wall2    { fill: #fff7ed; stroke: #d6b98f; stroke-width: 2; }
+.sv-skirt    { fill: #e2e8f0; }
+.sv-ground   { fill: #d3e5d3; }
+.sv-dark     { fill: #334155; }
+.sv-black    { fill: #0f172a; }
+.sv-white    { fill: #fff; }
+.sv-amber    { fill: #fbbf24; }
+.sv-red      { fill: #dc2626; }
+.sv-blue     { fill: #2563eb; }
+.sv-green    { fill: var(--accent, #2f7d32); }
+.sv-green-d  { fill: var(--accent-dark, #1f4d24); }
+.sv-glue     { fill: #fde68a; stroke: #d97706; stroke-width: 2; }
+
+.sv-mouse    { fill: #94a3b8; }
+.sv-ear      { fill: #fbcfe8; }
+.sv-nose     { fill: #f472b6; }
+.sv-tail     { fill: none; stroke: #f9a8d4; stroke-width: 4; stroke-linecap: round; }
+
+.sv-grate    { stroke: #64748b; stroke-width: 3; fill: none; }
+.sv-roach    { fill: #7c4a21; }
+.sv-roach-d  { fill: #4a2c12; }
+.sv-leg      { stroke: #4a2c12; stroke-width: 2.5; stroke-linecap: round; fill: none; }
+.sv-fly-w    { fill: rgba(255, 255, 255, 0.85); stroke: #94a3b8; stroke-width: 1.5; }
+.sv-path     { fill: none; stroke: #94a3b8; stroke-width: 2; stroke-dasharray: 5 6; stroke-linecap: round; }
+.sv-puffs circle { fill: rgba(47, 125, 50, 0.32); }
+
+.sv-lizard   { fill: none; stroke: #65a30d; stroke-width: 15; stroke-linecap: round; }
+.sv-lizard-tail { fill: none; stroke: #65a30d; stroke-width: 6; stroke-linecap: round; }
+.sv-lizard-h { fill: #65a30d; }
+.sv-lizard-leg { fill: none; stroke: #4d7c0f; stroke-width: 5; stroke-linecap: round; }
+.sv-thread   { stroke: #94a3b8; stroke-width: 1.5; fill: none; }
+.sv-spider   { fill: #1f2937; }
+.sv-leg-s    { stroke: #1f2937; stroke-width: 2.5; stroke-linecap: round; fill: none; }
+
+.sv-bags rect { fill: #e7d3a8; stroke: #b89a5f; stroke-width: 2; }
+.sv-tarp     { fill: #3f6f46; opacity: 0.94; }
+.sv-tarp-l   { stroke: rgba(255, 255, 255, 0.35); stroke-width: 3; fill: none; }
+.sv-gas circle { fill: rgba(47, 125, 50, 0.4); }
+.sv-tick     { stroke: #fff; stroke-width: 6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.sv-tick-g   { stroke: var(--accent, #2f7d32); stroke-width: 7; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+.sv-tin      { fill: #cbd5e1; }
+.sv-tin-l    { stroke: #94a3b8; stroke-width: 3; fill: none; }
+.sv-gapdark  { fill: #111827; }
+.sv-ring     { fill: none; stroke: #2563eb; stroke-width: 4; }
+.sv-pin      { fill: #fff; font: 700 14px sans-serif; }
+.sv-lens     { fill: #e2e8f0; }
+.sv-flash-l  { stroke: #f59e0b; stroke-width: 4; stroke-linecap: round; fill: none; }
+.sv-bead     { stroke: var(--accent, #2f7d32); stroke-width: 6; stroke-linecap: round; fill: none; }
+
+.sv-paper    { fill: #fff; stroke: #cbd5e1; stroke-width: 2; }
+.sv-paper2   { fill: #e2e8f0; }
+.sv-paper-l  { stroke: #cbd5e1; stroke-width: 3; stroke-linecap: round; fill: none; }
+.sv-axis     { stroke: #94a3b8; stroke-width: 3; stroke-linecap: round; fill: none; }
+.sv-bar      { fill: var(--accent, #2f7d32); }
+.sv-sign     { fill: none; stroke: #1d4ed8; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.sv-stamp-c  { fill: #fff; stroke: var(--accent, #2f7d32); stroke-width: 5; }
+
+.sv-roof     { fill: #64748b; }
+.sv-door     { fill: #b45309; }
+.sv-win      { fill: #bfdbfe; stroke: #94a3b8; stroke-width: 2; }
+.sv-shield   { fill: var(--accent-dark, #1f4d24); }
+.sv-beam     { fill: #a16207; }
+.sv-beam-l   { stroke: #854d0e; stroke-width: 3; stroke-linecap: round; fill: none; }
+.sv-termite  { fill: #e9c28a; stroke: #b88a4a; stroke-width: 1.5; }
+.sv-termite-d{ fill: #8a5a22; }
+
+.sv-legs path { stroke: #64748b; stroke-width: 6; stroke-linecap: round; fill: none; }
+.sv-tank     { fill: #bfdbfe; stroke: #64748b; stroke-width: 3; }
+.sv-tank-top { fill: #dbeafe; stroke: #64748b; stroke-width: 3; }
+.sv-tank-lid { fill: #64748b; }
+.sv-water    { fill: #3b82f6; opacity: 0.85; }
+.sv-drops path { fill: #60a5fa; }
+.sv-carpet   { fill: #b45309; }
+.sv-carpet-e { fill: #92400e; }
+.sv-carpet-l { stroke: #f5d0a0; stroke-width: 3; stroke-linecap: round; fill: none; }
+.sv-brush    { fill: #475569; }
+.sv-bristle  { stroke: #f59e0b; stroke-width: 4; stroke-linecap: round; fill: none; }
+
+/* ---------- Animations (each only moves the INNER group) ---------- */
+.sv-creep   { animation: sv-creep 3.4s ease-in-out infinite alternate; }
+.sv-scurry  { animation: sv-creep 2.2s ease-in-out infinite alternate; }
+.sv-bob     { animation: sv-bob 2.4s ease-in-out infinite; }
+.sv-sway    { animation: sv-sway 4s ease-in-out infinite alternate; transform-origin: 50% 50%; transform-box: fill-box; }
+.sv-drop    { animation: sv-drop 3.2s ease-in-out infinite alternate; }
+.sv-float   { animation: sv-float 3.6s ease-in-out infinite; }
+.sv-flash   { animation: sv-flash 2.6s ease-in-out infinite; }
+.sv-wave    { animation: sv-wave 3s linear infinite; }
+.sv-stamp   { transform-box: fill-box; transform-origin: center; animation: sv-pop 3.4s ease-out infinite; }
+.sv-ring    { transform-box: fill-box; transform-origin: center; animation: sv-pulse 2.4s ease-in-out infinite; }
+
+.sv-puffs circle,
+.sv-gas circle,
+.sv-drops path { transform-box: fill-box; transform-origin: center; }
+.sv-puffs circle { animation: sv-puff 2.4s ease-out infinite; }
+.sv-puffs circle:nth-child(2) { animation-delay: 0.5s; }
+.sv-puffs circle:nth-child(3) { animation-delay: 1s; }
+.sv-puffs circle:nth-child(4) { animation-delay: 1.5s; }
+.sv-gas circle { animation: sv-rise 3.2s ease-out infinite; }
+.sv-gas circle:nth-child(2) { animation-delay: 0.6s; }
+.sv-gas circle:nth-child(3) { animation-delay: 1.2s; }
+.sv-gas circle:nth-child(4) { animation-delay: 1.8s; }
+.sv-gas circle:nth-child(5) { animation-delay: 2.4s; }
+.sv-drops path { animation: sv-fall 2.8s ease-in infinite; }
+.sv-drops path:nth-child(2) { animation-delay: 0.9s; }
+.sv-drops path:nth-child(3) { animation-delay: 1.8s; }
+
+.sv-bar { transform-box: fill-box; transform-origin: bottom; animation: sv-grow 3.4s ease-out infinite; animation-delay: var(--d, 0s); }
+
+@keyframes sv-creep  { from { transform: translateX(-10px); } to { transform: translateX(14px); } }
+@keyframes sv-bob    { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+@keyframes sv-sway   { from { transform: rotate(-1.5deg); } to { transform: rotate(1.5deg); } }
+@keyframes sv-drop   { from { transform: translateY(-10px); } to { transform: translateY(14px); } }
+@keyframes sv-float  { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+@keyframes sv-flash  { 0%,70%,100% { opacity: 0; } 78%,90% { opacity: 1; } }
+@keyframes sv-wave   { from { transform: translateX(0); } to { transform: translateX(-60px); } }
+@keyframes sv-pop    { 0% { transform: scale(0); } 18% { transform: scale(1.12); } 28%,100% { transform: scale(1); } }
+@keyframes sv-pulse  { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.14); opacity: 0.6; } }
+@keyframes sv-puff   { 0% { opacity: 0; transform: scale(0.4) translateX(0); } 30% { opacity: 1; } 100% { opacity: 0; transform: scale(1.5) translateX(14px); } }
+@keyframes sv-rise   { 0% { opacity: 0; transform: translateY(14px); } 30% { opacity: 1; } 100% { opacity: 0; transform: translateY(-20px); } }
+@keyframes sv-fall   { 0% { opacity: 0; transform: translateY(-14px); } 25% { opacity: 1; } 100% { opacity: 0; transform: translateY(26px); } }
+@keyframes sv-grow   { 0% { transform: scaleY(0); } 25%,100% { transform: scaleY(1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .sv *, .sv { animation: none !important; }
+  .sv-puffs circle, .sv-gas circle, .sv-drops path { opacity: 0.7; }
+  .sv-flash { opacity: 0; }
+}
+
+/* Card art area: the illustration fills the 16:10 frame */
+.home-card__illus {
+  width: 100%;
+  height: 100%;
+}
+.home-card__illus .home-icon {
+  width: 72px;
+  height: 72px;
+  margin: auto;
+  display: block;
+  color: var(--accent, #2f7d32);
+}

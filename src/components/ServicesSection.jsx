@@ -1,12 +1,20 @@
 import { useState } from "react";
 import "./service.css"
-import {SERVICES,SERVICE_STATS,SERVICE_PROMISES,} from "./Servicesdata";
+import {
+  SERVICES,
+  SERVICE_STATS,
+  SERVICE_PROMISES,
+} from "./Servicesdata";
+import { ServiceArt, ART_BY_TITLE } from "./Serviceillustrations";
 
 const PHONE = "+918947872622";
 const PHONE_LABEL = "+91 89478 72622";
 
 const ServiceCard = ({ service, index }) => {
-  const [imgFailed, setImgFailed] = useState(false);
+  // A real photo wins if it exists. If it is missing or fails to load, the
+  // animated illustration for this service is shown instead.
+  const [imgFailed, setImgFailed] = useState(!service.image);
+  const artName = service.art || ART_BY_TITLE[service.title];
 
   return (
     <article
@@ -15,7 +23,7 @@ const ServiceCard = ({ service, index }) => {
       style={{ "--i": index % 4 }}
     >
       <div className="home-card__art">
-        {!imgFailed && service.image ? (
+        {!imgFailed ? (
           <img
             className="home-card__img"
             src={service.image}
@@ -27,10 +35,14 @@ const ServiceCard = ({ service, index }) => {
             onError={() => setImgFailed(true)}
           />
         ) : (
-          <div className="home-card__fallback">
-            <svg className="home-icon" viewBox="0 0 64 64" aria-hidden="true">
-              {service.icon}
-            </svg>
+          <div className="home-card__illus">
+            {artName ? (
+              <ServiceArt name={artName} />
+            ) : (
+              <svg className="home-icon" viewBox="0 0 64 64" aria-hidden="true">
+                {service.icon}
+              </svg>
+            )}
           </div>
         )}
 

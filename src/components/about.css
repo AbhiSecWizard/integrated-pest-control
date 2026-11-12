@@ -1,0 +1,167 @@
+/* Add to your home stylesheet. Adjust variables to match your theme. */
+
+/* ---------- Photo frame ---------- */
+.ab-figure { margin: 0; }
+.ab-figure__frame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--soft, #eef5ee);
+  box-shadow: 0 20px 44px rgba(15, 23, 42, 0.16);
+}
+.ab-figure__frame img,
+.ab-figure__frame .ab-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ab-figure figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--muted, #4b5563);
+}
+.ab-figure--tilt .ab-figure__frame { transform: rotate(-1.5deg); transition: transform 0.4s; }
+.ab-figure--tilt:hover .ab-figure__frame { transform: rotate(0); }
+
+/* ---------- Illustration colours ---------- */
+.ab-bg      { fill: var(--soft, #eef5ee); }
+.ab-sun     { fill: #fde68a; }
+.ab-ground  { fill: #d3e5d3; }
+.ab-wall    { fill: #f8fafc; stroke: #94a3b8; stroke-width: 3; }
+.ab-roof    { fill: #64748b; }
+.ab-chimney { fill: #94a3b8; }
+.ab-door    { fill: #cbd5e1; }
+.ab-win     { fill: #bfdbfe; stroke: #94a3b8; stroke-width: 3; }
+.ab-win-line{ stroke: #94a3b8; stroke-width: 3; }
+.ab-shield  { fill: var(--accent-dark, #1f4d24); }
+.ab-tick    { fill: none; stroke: #fff; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; }
+.ab-shadow  { fill: rgba(15, 23, 42, 0.15); }
+.ab-leg     { fill: #334155; }
+.ab-body    { fill: var(--accent, #2f7d32); }
+.ab-skin    { fill: #e0ac85; }
+.ab-cap     { fill: var(--accent-dark, #1f4d24); }
+.ab-tank    { fill: #475569; }
+.ab-hose    { fill: none; stroke: #475569; stroke-width: 5; stroke-linecap: round; }
+.ab-paper   { fill: #fff; stroke: #cbd5e1; stroke-width: 3; }
+.ab-head    { fill: var(--accent-dark, #1f4d24); }
+.ab-line    { fill: none; stroke: #cbd5e1; stroke-width: 5; stroke-linecap: round; }
+.ab-sign    { fill: none; stroke: #1d4ed8; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+.ab-stamp   { fill: var(--accent, #2f7d32); }
+.ab-bags rect { fill: #e7d3a8; stroke: #b89a5f; stroke-width: 2; }
+.ab-float   { animation: ab-float 4s ease-in-out infinite; }
+@keyframes ab-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+/* ---------- Shared text ---------- */
+.ab-lead { margin: 0.75rem 0 1.25rem; font-size: 1.08rem; line-height: 1.7; color: var(--muted, #4b5563); max-width: 60ch; }
+.ab-p    { margin: 0 0 1rem; line-height: 1.75; color: var(--muted, #4b5563); max-width: 62ch; }
+.ab-h1   { font-size: clamp(2rem, 4.5vw, 3.2rem); line-height: 1.12; }
+.ab-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; }
+.ab-link { font-weight: 600; color: var(--accent-dark, #1f4d24); }
+
+/* ---------- Home About section ---------- */
+.ab-mini-stats {
+  list-style: none;
+  margin: 1.5rem 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+.ab-mini-stats li { display: flex; flex-direction: column; gap: 0.15rem; border-left: 3px solid var(--accent, #2f7d32); padding-left: 0.7rem; }
+.ab-mini-stats strong { font-size: 1.05rem; }
+.ab-mini-stats span { font-size: 0.8rem; color: var(--muted, #4b5563); line-height: 1.3; }
+
+/* ---------- About page ---------- */
+.ab-stats-band { background: var(--accent-dark, #1f4d24); color: #fff; }
+.ab-stats {
+  list-style: none;
+  margin: 0 auto;
+  padding: 1.75rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+.ab-stats strong { display: block; font-size: 1.6rem; }
+.ab-stats span { font-size: 0.9rem; opacity: 0.85; }
+
+.ab-values {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+.ab-value {
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid var(--line, #e5e7eb);
+  border-radius: 16px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.ab-value:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(15, 23, 42, 0.1); }
+.ab-icon { width: 46px; height: 46px; color: var(--accent, #2f7d32); }
+.ab-value h3 { margin: 0.8rem 0 0.4rem; font-size: 1.1rem; }
+.ab-value p { margin: 0; line-height: 1.6; color: var(--muted, #4b5563); }
+
+.ab-aud { display: grid; gap: 1.5rem; margin-top: 1.25rem; }
+.ab-aud__item h3 { margin: 0 0 0.25rem; font-size: 1.15rem; }
+.ab-aud__item > p { margin: 0 0 0.6rem; color: var(--muted, #4b5563); line-height: 1.6; }
+
+.ab-areas { list-style: none; margin: 1.5rem 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.ab-areas li {
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--accent, #2f7d32);
+  border-radius: 999px;
+  background: #fff;
+  font-weight: 600;
+  color: var(--accent-dark, #1f4d24);
+}
+
+.ab-team { margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; }
+.ab-team__photo {
+  aspect-ratio: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--soft, #eef5ee);
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+  color: var(--accent, #2f7d32);
+}
+.ab-team__photo img { width: 100%; height: 100%; object-fit: cover; }
+.ab-team h3 { margin: 0.7rem 0 0.1rem; font-size: 1.05rem; }
+.ab-team p { margin: 0; color: var(--muted, #4b5563); }
+
+.ab-cta {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  padding: 2.25rem;
+  border-radius: 20px;
+  background: var(--accent-dark, #1f4d24);
+  color: #fff;
+}
+.ab-cta h2 { margin: 0 0 0.5rem; font-size: 1.7rem; }
+.ab-cta p { margin: 0 0 1rem; max-width: 52ch; opacity: 0.92; line-height: 1.6; }
+.ab-address { font-style: normal; font-size: 0.92rem; line-height: 1.7; opacity: 0.95; }
+.ab-address a { color: #fff; }
+.ab-cta__actions { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.ab-link:focus-visible,
+.ab-address a:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
+
+@media (max-width: 860px) {
+  .ab-mini-stats, .ab-stats { grid-template-columns: repeat(2, 1fr); }
+  .ab-cta { grid-template-columns: 1fr; padding: 1.5rem; }
+  .ab-figure--tilt .ab-figure__frame { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ab-float { animation: none; }
+  .ab-value, .ab-figure--tilt .ab-figure__frame { transition: none; }
+}

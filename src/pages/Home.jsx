@@ -967,6 +967,7 @@ import ProcessSection from "../components/ProcessSection";
 import AboutSection from "../components/AboutSection";
 import ContactSection from "../components/ContactSection";
 import FooterSection from "../components/FooterSection";
+import AboutPage from "../components/AboutPage";
 
 export default function Home() {
   const [anim, setAnim] = useState(false);
@@ -1047,7 +1048,7 @@ export default function Home() {
       <ServicesSection/>
       <IndustrialSection/>
       <ProcessSection/>
-      <AboutSection/>
+      <AboutPage/>
       <ContactSection/>
       <FooterSection/>
     </div>
