@@ -186,6 +186,7 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+  padding-bottom: 3px;
   animation: heroRise 0.95s var(--h-ease) forwards,
     heroShimmer 6s linear 1.6s infinite;
   animation-delay: var(--d, 0ms), 1.6s;

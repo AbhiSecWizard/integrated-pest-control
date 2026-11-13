@@ -6,10 +6,10 @@ import { HeroArt } from "../shared/Illustrations";
 import { COCKROACH, RODENT } from "../shared/ServiceIcons";
 
 // Hero background images
-import warehouse from "../images/hero/slide-1-warehouse.png";
-import factory from "../images/hero/slide-2-factory.png";
-import home from "../images/hero/slide-3-home.png";
-import silos from "../images/hero/slide-4-silos.png";
+import warehouse from "../images/hero/slide-1-warehouse.webp";
+import factory from "../images/hero/slide-2-factory.webp";
+import home from "../images/hero/slide-3-home.webp";
+import silos from "../images/hero/slide-4-silos.webp";
 
 // Slideshow configuration
 const SLIDES = [

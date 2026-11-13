@@ -62,6 +62,7 @@
 }
 .ipc-nav__link:hover {
   border-bottom-color: #9eb86e;
+    
 }
 
 .ipc-nav a.ipc-nav__cta {
@@ -73,11 +74,13 @@
   border-radius: 999px;
   background: #9eb86e;
   color: #353535;
-  font-weight: 600;
   white-space: nowrap;
+  font-size:large;
+  font-weight: bolder;
 }
 .ipc-nav a.ipc-nav__cta:hover {
   background: #b5cb8a;
+
 }
 
 .ipc-nav a:focus-visible,

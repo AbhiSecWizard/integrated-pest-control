@@ -1,11 +1,11 @@
-import warehouseBefore from "../images/cases/warehouse-before.png";
-import warehouseAfter from "../images/cases/warehouse-after.png";
+import warehouseBefore from "../images/cases/warehouse-before.webp";
+import warehouseAfter from "../images/cases/warehouse-after.webp";
 
-import factoryBefore from "../images/cases/factory-before.png";
-import factoryAfter from "../images/cases/factory-after.png";
+import factoryBefore from "../images/cases/factory-before.webp";
+import factoryAfter from "../images/cases/factory-after.webp";
 
-import rodentBefore from "../images/cases/rodent-before.png";
-import rodentAfter from "../images/cases/rodent-after.png";
+import rodentBefore from "../images/cases/rodent-before.webp";
+import rodentAfter from "../images/cases/rodent-after.webp";
 
 export const FACTORY_POINTS = [
   [
